@@ -1,0 +1,84 @@
+/* General styles for the body */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container styling */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for depth */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Add smooth transition on hover */
+}
+
+.login-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Elevate on hover for more engagement */
+}
+
+/* Header styling */
+.login-header {
+    margin-bottom: 30px;
+    font-size: 26px; /* Increased for emphasis */
+    color: #333333;
+    font-weight: 700; /* Bolder for stronger title presence */
+}
+
+/* Google Login Button */
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #555555;
+    border: 2px solid #4285F4;
+    border-radius: 8px; /* More rounded for modern feel */
+    padding: 12px 25px; /* Larger padding for better touch targets */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Added smooth transformations */
+}
+
+.google-btn:hover {
+    background-color: #f1f3f4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px); /* Lift the button slightly on hover */
+}
+
+/* Google Logo inside the button */
+.google-btn .google-icon {
+    width: 22px; /* Slightly larger for better visibility */
+    height: 22px;
+    margin-right: 12px; /* Increased spacing for balance */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+    
+    .login-header {
+        font-size: 22px; /* Adjust the title size on smaller screens */
+    }
+    
+    .google-btn {
+        padding: 10px 15px; /* Adjust the button padding for smaller screens */
+    }
+
+    .google-btn .google-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

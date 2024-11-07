@@ -1,0 +1,276 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #4CAF50;
+    color: white;
+    transition: 0.3s;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgb(94, 97, 94), rgb(107, 187, 170)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStA9kM-aEyUkN9uhQlKGuNjPwJh1S2sergkhH7V40oXhr97O5KPqpMSBKIfQDBEZULO0o&usqp=CAU') center/cover no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .cta-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-btn:hover {
+    background-color: #45a049;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+/*contact section*/
+.contact {
+    display: flex;                 /* Enables flexbox */
+    flex-direction: column;        /* Stacks items vertically */
+    justify-content: center;       /* Vertically centers content */
+    align-items: center;           /* Horizontally centers content */
+    height:40 vh;                 /* Takes the full viewport height */
+    text-align: center;            /* Centers the text within the section */
+    background-color: #f0f4f8;     /* Optional: Background color for the section */
+    padding: 20px;                 /* Padding to add space around the content */
+}
+
+
+/* About Section styling */
+.about {
+    display: flex;                 /* Enables flexbox */
+    flex-direction: column;        /* Stacks items vertically */
+    justify-content: center;       /* Vertically centers content */
+    align-items: center;           /* Horizontally centers content */
+    height:40 vh;                 /* Takes the full viewport height */
+    text-align: center;            /* Centers the text within the section */
+    background-color: #f0f4f8;     /* Optional: Background color for the section */
+    padding: 20px;                 /* Padding to add space around the content */
+}
+
+/* About section title */
+.about h2 {
+    font-size: 32px;               /* Set the size of the title */
+    color: #333;                   /* Title color */
+    margin-bottom: 20px;           /* Space between the title and the paragraph */
+}
+
+/* About section paragraph */
+.about p {
+    font-size: 18px;               /* Set font size for the paragraph */
+    color: #555;                   /* Paragraph color */
+    max-width: 800px;              /* Limits the width of the paragraph for readability */
+    line-height: 1;              /* Adjusts line height for better readability */
+}
+
+
+
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.testimonial-card img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer .newsletter {
+    margin-bottom: 20px;
+}
+
+footer input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+footer button {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #4CAF50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero .cta-btn {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+}

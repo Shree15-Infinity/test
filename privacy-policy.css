@@ -1,0 +1,87 @@
+/* General styles for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Privacy Policy container */
+.privacy-policy-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #4CAF50;
+}
+
+/* Paragraph */
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* FAQ styles */
+.faq {
+    margin-bottom: 15px;
+}
+
+.faq button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.faq button:hover {
+    background-color: #45a049;
+}
+
+.faq-answer {
+    padding: 10px;
+    display: none;
+    background-color: #f1f1f1;
+    border-left: 5px solid #4CAF50;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#back-to-top:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .privacy-policy-container {
+        padding: 15px;
+    }
+
+    #back-to-top {
+        padding: 8px;
+    }
+}

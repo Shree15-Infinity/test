@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Header/Logo -->
+        <div class="login-header">Create New Account</div>
+
+        <!-- Create Account Form -->
+        <form class="login-form" id="createAccountForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="username" placeholder="Username" required>
+
+            <div class="show-password">
+                <input type="password" id="newPassword" placeholder="Password" required>
+                <span class="toggle-password" onclick="toggleNewPassword()">👁️</span>
+            </div>
+
+            <div class="show-password">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <span class="toggle-password" onclick="toggleConfirmPassword()">👁️</span>
+            </div>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <!-- Back to Login Link -->
+        <div class="login-options">
+            <a href="login.html">Already have an account? Log In</a>
+        </div>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>

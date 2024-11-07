@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* CSS for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Additional styling to ensure the section starts right after the header */
+        section {
+            padding: 100px 0;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 50px;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+        }
+
+        /* Styling for the sections */
+        .hero {
+            background-color: #f4f4f4;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .features, .contact, .about, .testimonials {
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">VAAYU</div>
+        <nav id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="Login.html">Login</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <!-- Hero Section (Home) -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Welcome to VAAYU</h1>
+            <p>Your gateway to a smarter digital experience</p>
+            <a href="Login.html" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section (Services) -->
+    <section class="features" id="services">
+        <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Real-time Monitoring</h3>
+            <p>Track your data with real-time analytics and insights.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-lock"></i>
+            <h3>Data Security</h3>
+            <p>We ensure top-level security for all your data and operations.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Our dedicated team is here to help you anytime, anywhere.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-card">
+            <img src="data:image/jpeg;base64,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" alt="User">
+            <p>"VAAYU has transformed the way we manage our daily tasks. Highly recommend!"</p>
+            <h4>- Aditya Msake</h4>
+        </div>
+        <div class="testimonial-card">
+            <img src="data:image/jpeg;base64,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" alt="User">
+            <p>"The customer support is excellent. Always there when we need help."</p>
+            <h4>- Avish Rangari</h4>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>The Vayu, often referred to as a smart ventilator or bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to individuals who are not breathing or not breathing adequately. It is widely used in emergency situations, such as cardiac arrest, respiratory failure, or during anesthesia to assist or replace spontaneous breathing.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>For any inquiries, feel free to reach us at vaayu@myapp.com or call us at +91 7666084235.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="newsletter">
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button>Subscribe</button>
+        </div>
+        <div class="social-icons">
+            <a href="#home" aria-label="Home">Home</a>
+            <a href="Login.html" aria-label="Login">Login</a>
+            <a href="#about" aria-label="About Us">About Us</a>
+        </div>
+        <p>Contact Us: vaayu@myapp.com | +91 7666084235 | GHRCE, Nagpur</p>
+        <p>&copy; 2024 MyApp. All Rights Reserved | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+    </footer>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            var nav = document.getElementById('nav-links');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

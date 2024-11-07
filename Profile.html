@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to external CSS -->
+    <style>
+        /* Basic styles for smooth scrolling and responsive menu */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 50px;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+        }
+
+        /* Profile Card Styling */
+        .profile-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .profile-header {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .profile-info {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .profile-actions button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .profile-actions button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">MyApp</div>
+        <nav id="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <!-- Profile Card Container -->
+    <div class="profile-container">
+        <!-- Header/Avatar -->
+        <div class="profile-header">Shrikant Sonbawane</div>
+        <img class="profile-avatar" src="profile.png" alt="Profile Picture">
+
+        <!-- Profile Info -->
+        <div class="profile-info">
+            <p><strong>Email:</strong> shrikantsonbawane@gmail.com</p>
+            <p><strong>Username:</strong> Shrikant</p>
+            <p><strong>Location:</strong> Nagpur, Maharashtra, India</p>
+        </div>
+
+        <!-- Profile Actions -->
+        <div class="profile-actions">
+            <button>Edit Profile</button>
+            <button onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="profile.js"></script>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            var nav = document.getElementById('nav-links');
+            nav.classList.toggle('active');
+        }
+
+        // Redirect to home page on logout
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
